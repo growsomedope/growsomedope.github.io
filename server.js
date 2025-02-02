@@ -1,8 +1,7 @@
-// server.js
-// Import required modules
-const express = require('express'); // Express framework for handling HTTP requests
-const mysql = require('mysql2'); // MySQL2 client for Node.js
-const cors = require('cors'); // For web security
+
+const express = require('express'); 
+const mysql = require('mysql2'); 
+const cors = require('cors');
 
 // Create an instance of express
 const app = express();
@@ -10,10 +9,9 @@ app.use(cors());
 
 // Create a connection to the MySQL database
 const db = mysql.createConnection({
-    host: "localhost", // Database host
-    user: "root",      // Database username
-    password: "brahms", // Database password
-    // database: "" // Name of the database
+    host: "localhost", 
+    user: "root",     
+    password: "brahms",
 });
 
 // Define a route for the root URL '/'
@@ -48,8 +46,8 @@ app.get('/data', (req, res) => {
     }
     if (flag) sql = sql.slice(0, -4)
     sql = sql + ' order by tot_day_suply desc'
-    db.query(sql, (err, data) => { // Execute the SQL query
-        if (err) return res.json(err); // If there's an error, return the error
+    db.query(sql, (err, data) => { 
+        if (err) return res.json(err); 
         return res.send(convertJSONToTable(data))
     })
 });
