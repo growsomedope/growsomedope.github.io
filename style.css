@@ -1,4 +1,20 @@
-td, th {
-    border: 1px solid black;
-    margin-right: 150px;
+.params {
+    display: inline-flex;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+body {
+    font-family: "Lucida Console", sans-serif;
+}
+
+h1 {
+    margin: 10px;
+}
+
+#submit {
+    width: 400px;
+    background-color: aqua; 
+    font-size: 21px;
+    font-family: "Lucida Console", sans-serif;
 }
