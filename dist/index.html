@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" src="/style.css"></head>
+<body>
+    <form action="http://localhost:8081/data">
+        <div>
+            <h1>Choose one or more search parameters</h1>
+            <div class="params">
+                <div>
+                    <label for="providerLastName" class="params">Provider last name:</label>
+                    <input type="text" id="providerLastName" name="providerLastName" class="params">
+                </div>
+                <div>
+                    <label for="providerFirstName" class="params">Provider first name:</label>
+                    <input type="text" id="providerFirstName" name="providerFirstName" class="params">
+                </div>
+                <div>
+                    <label for="med" class="params">Medication:</label>
+                    <input type="text" id="med" name="med" class="params">
+                </div>
+                <div>
+                    <label for="providerLastName" class="params">State Abbr</label>
+                    <input type="text" id="state" name="state" class="params">
+                </div>
+            </div>
+            <input type="submit" id="submit">
+        </div>
+    </form>
+
+</body>
+</html>
